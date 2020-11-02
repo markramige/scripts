@@ -136,6 +136,10 @@ python3 -m pip install -U --user -r $HOME/bin/asnlookup/requirements.txt
 git clone https://github.com/x90skysn3k/brutespray $HOME/bin/brutespray
 python3 -m pip install -U --user -r $HOME/bin/brutespray/requirements.txt
 
+#cloud_enum
+git clone https://github.com/initstring/cloud_enum $HOME/bin/cloud_enum
+python3 -m pip install -U --user -r $HOME/bin/cloud_enum/requirements.txt
+
 # domlink
 git clone https://github.com/vysecurity/DomLink $HOME/bin/domlink
 python3 -m pip install -U --user -r $HOME/bin/domlink/requirements.txt
