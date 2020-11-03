@@ -153,6 +153,9 @@ python3 -m pip install -U --user mmh3
 wget https://raw.githubusercontent.com/m4ll0k/Bug-Bounty-Toolz/master/getrelationship.py -O $HOME/bin/getrelationship.py
 python3 -m pip install -U --user lxml
 
+git clone https://github.com/arthaud/git-dumper $HOME/bin/git-dumper
+python3 -m pip install -U --user -r $HOME/bin/git-dumper/requirements.txt
+
 # github-search
 git clone https://github.com/gwen001/github-search $HOME/bin/github-search
 python3 -m pip install -U --user -r $HOME/bin/github-search/requirements3.txt
