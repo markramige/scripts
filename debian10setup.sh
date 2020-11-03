@@ -1,6 +1,7 @@
 #!/bin/bash
 
 cd $HOME
+#sudo sed -i 's/$/ contrib non-free/' /etc/apt/sources.list ##gcloud
 sudo apt update
 sudo apt full-upgrade -y
 sudo apt install -y build-essential curl wget whois git nmap tmux gron \
