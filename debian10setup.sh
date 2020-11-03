@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cd $HOME
-#sudo sed -i 's/$/ contrib non-free/' /etc/apt/sources.list ##gcloud
+sudo sed -i 's/$/ contrib non-free/' /etc/apt/sources.list ##gcloud
 sudo apt update
 sudo apt full-upgrade -y
 sudo apt install -y build-essential curl wget whois git nmap tmux gron \
@@ -25,7 +25,7 @@ mv $HOME/bin/massdns/bin/massdns $HOME/.local/bin/
 
 ###DOCKER######################################################################
 #witnessme
-docker pull byt3bl33d3r/witnessme
+sudo docker pull byt3bl33d3r/witnessme
 mkdir $HOME/witnessme
 # docker run --name=witnessme -it --entrypoint=/bin/sh -v $HOME/witnessme:/transfer IMAGEID
 
@@ -100,12 +100,12 @@ go get -u github.com/tomnomnom/waybackurls
 ###LISTS#######################################################################
 mkdir $HOME/lists
 git clone --depth 1 https://github.com/danielmiessler/SecLists.git $HOME/lists/seclists
-wget https://gist.github.com/nullenc0de/96fb9e934fc16415fbda2f83f08b28e7/raw/146f367110973250785ced348455dc5173842ee4/content_discovery_nullenc0de.txt -O $HOME/lists/content_discovery_nullenc0de.txt
-wget https://gist.github.com/jhaddix/b80ea67d85c13206125806f0828f4d10/raw/c81a34fe84731430741e0463eb6076129c20c4c0/content_discovery_all.txt -O $HOME/lists/content_discovery_all.txt
-wget https://gist.github.com/jhaddix/86a06c5dc309d08580a018c66354a056/raw/96f4e51d96b2203f19f6381c8c545b278eaa0837/all.txt -O $HOME/lists/all.txt
+wget 'https://gist.github.com/nullenc0de/96fb9e934fc16415fbda2f83f08b28e7/raw/146f367110973250785ced348455dc5173842ee4/content_discovery_nullenc0de.txt' -O $HOME/lists/content_discovery_nullenc0de.txt
+wget 'https://gist.github.com/jhaddix/b80ea67d85c13206125806f0828f4d10/raw/c81a34fe84731430741e0463eb6076129c20c4c0/content_discovery_all.txt' -O $HOME/lists/content_discovery_all.txt
+wget 'https://gist.github.com/jhaddix/86a06c5dc309d08580a018c66354a056/raw/96f4e51d96b2203f19f6381c8c545b278eaa0837/all.txt' -O $HOME/lists/all.txt
 diff -u $HOME/lists/content_discovery_nullenc0de.txt $HOME/lists/content_discovery_all.txt > $HOME/lists/content_discovery.txt
-wget https://gist.github.com/jhaddix/78cece26c91c6263653f31ba453e273b/raw/a4869d58a5ce337d1465c2d1b29777b9eecd371f/cloud_metadata.txt -O $HOME/lists/cloud_metadata.txt
-wget https://gist.github.com/jhaddix/77253cea49bf4bd4bfd5d384a37ce7a4/raw/ca20c5d8543ef3404b6032938162790636f89241/Github%2520bash%2520generated%2520search%2520links%2520(from%2520hunter.sh) -O $HOME/lists/github_search.txt
+wget 'https://gist.github.com/jhaddix/78cece26c91c6263653f31ba453e273b/raw/a4869d58a5ce337d1465c2d1b29777b9eecd371f/cloud_metadata.txt' -O $HOME/lists/cloud_metadata.txt
+wget 'https://gist.github.com/jhaddix/77253cea49bf4bd4bfd5d384a37ce7a4/raw/ca20c5d8543ef3404b6032938162790636f89241/Github%2520bash%2520generated%2520search%2520links%2520(from%2520hunter.sh)' -O $HOME/lists/github_search.txt
 
 ###NODE########################################################################
 #retire.js
