@@ -1,0 +1,13 @@
+version: '3'
+services:
+  nginx:
+    image: nginx:1.9.9
+    container_name: nginx
+    restart: unless-stopped
+    hostname: nginx
+    network_mode: bridge
+    ports:
+      - 80:80/tcp
+      - 443:443/tcp
+    volumes:
+      - /etc/nginx:/etc/nginx
